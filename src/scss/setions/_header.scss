@@ -1,0 +1,205 @@
+.header{
+    position: relative;
+    background: url('../img/1_bg.jpg') center /cover fixed;
+
+    .contact-info {
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        background-color: $bg_filter_75;
+
+        p {
+            width: 345px;
+            position: absolute;
+            left: 50%;
+            bottom: 563px;
+            transform: translateX(-50%) rotateZ(270deg);
+            @include rem(font-size, 18px);
+            letter-spacing: $letter_space_0-1;
+            color: $slider_btn;
+        }
+
+        &__socials {
+            position: absolute;
+            left: 50%;
+            bottom: 86px;
+            transform: translateX(-50%);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -115px;
+                width: 3px;
+                height: 75px;
+                background-color: $slider_btn;
+            }
+
+            a {
+                &:not(:last-child){
+                    margin-bottom: 30px;
+                }
+
+                svg{
+                    fill: $slider_btn;
+                    transition: fill .3s ease;
+                }
+        
+                &:hover {
+                    svg{
+                        fill: $default_gold;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-nav,
+    .phone-box {
+        padding: 50px 0;
+    }
+
+    @include media-breakpoint-down(xxl) {
+        .phone-box {
+            padding: 0 0 0 50px;
+            text-align: center;
+        }
+    }
+    
+    .nav-link,
+    .phone-number {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: $default_gold;
+            transition: all .3s ease;
+        }
+
+        &:hover {
+            &::after{
+                width: 100%;
+            }
+        }
+    } 
+
+    .nav-item {
+        letter-spacing: $letter_space_0-1;
+        margin-right: 30px;
+
+        @include media-breakpoint-down(xxl) {
+            &:nth-child(5) {
+                margin-right: 0;
+    
+            }
+        }
+    }
+
+    .nav-link {
+        @include rem(font-size, 18px);
+    }
+
+    .phone-number {
+        @include rem(font-size, 16px);
+    }
+
+    .banner {
+        padding: 140px 0 208px 0;
+    
+        &__content {
+            h1,
+            p {
+                margin-bottom: 50px;
+            }
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 400px;
+    
+            .carousel-inner {
+                width: 400px;
+                height: 510px;
+            }
+        }
+    
+        &__slide {
+            max-width: 350px;
+            position: relative;
+            z-index: 1;
+    
+            &::before, 
+            &::after {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 100%;
+                height: 100%;
+            }
+    
+            &::before {
+                z-index: -1;
+                background-color: $slider_img_filter;
+            }
+    
+            &::after {
+                z-index: -2;
+                background: url('../img/1_poster.jpg') 0 0 /contain;
+            }
+    
+            &-img {
+                width: 100%;
+            }
+        }
+    
+        &__slider-btn-prev,
+        &__slider-btn-next {
+            position: absolute;
+            bottom: -55px;
+            background-color: initial;
+            border: 0;
+            gap: 25px;
+    
+            span:last-child {
+                @include rem(font-size, 18px);
+                line-height: 25px;
+                letter-spacing: $letter_space_0-1;
+            }
+    
+            span {
+                color: $slider_btn;
+                transition: color .3s ease;
+    
+                svg {
+                    width: 40px;
+                    height: 25px;
+                    fill: $slider_btn;
+                    transition: fill .3s ease;
+                }
+            }
+        }
+    
+        &__slider-btn-prev {
+            left: 0;
+        }
+    
+        &__slider-btn-next {
+            right: 0;
+        }
+    
+        &__slider-btn-prev:hover,
+        &__slider-btn-next:hover {
+            span {
+                color: $white;
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}

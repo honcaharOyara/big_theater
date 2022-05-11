@@ -1,14 +1,44 @@
-$default_font_size: 14px;
+// Font sizes
+$font-size-base: 14px;
+
+$display-font-sizes: (
+  1: 4.57142rem, // 64
+  2: 3.42857rem, // 48
+  3: 2.57142rem, // 36
+  4: 1.71428rem, // 24
+  5: 1.5rem, // 21
+  6: 1rem
+);
+
+// Letter spacing
+$letter_space_0-1: 0.1em;
+$letter_space_0-05: 0.05em;
 
 // Colors
 $default_white: #fff;
+$slider_btn: #C4C4C4;
 $default_input_text: #989898;
 $default_silver: #333333;
 $default_gold: #D1A954;
 $input_bg: #444444;
 $input_border: #616161;
+$social_icon: #FFFFFF99;
 
 // Image filters
-$slider_img_filter: rgba(51, 51, 51, 0.65);
-$bg_filter_85: rgba(51, 51, 51, 0.9);
+$slider_img_filter: rgba(209, 169, 84, 0.85);
+$bg_filter_75: rgba(51, 51, 51, 0.75);
+$bg_filter_85: rgba(51, 51, 51, 0.85);
 $bg_filter_9: rgba(51, 51, 51, 0.9);
+
+// Containers 
+$container-max-widths: (
+  sm: 510px,
+  md: 690px,
+  lg: 992px,
+  xl: 1110px,
+  xxl: 1320px
+);
+
+// $carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41 16'  fill='#{$carousel-control-color}'><path d='M0.292892 7.2929C-0.0976296 7.68342 -0.0976295 8.31659 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928935C7.68054 0.538411 7.04738 0.538411 6.65685 0.928935L0.292892 7.2929ZM41 7L1 7L1 9L41 9L41 7Z'/></svg>");
+// $carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41 16' fill='#{$carousel-control-color}'><path d='M40.7071 8.70711C41.0976 8.31659 41.0976 7.68342 40.7071 7.2929L34.3431 0.928938C33.9526 0.538414 33.3195 0.538414 32.9289 0.928938C32.5384 1.31946 32.5384 1.95263 32.9289 2.34315L38.5858 8.00001L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM-1.74846e-07 9L40 9.00001L40 7.00001L1.74846e-07 7L-1.74846e-07 9Z'/></svg>");
+$carousel-control-icon-width:  40px;

@@ -51,6 +51,7 @@ function buildJs() {
             output: {
                 filename: 'script.js',
             },
+            devtool: 'source-map',
         }))
         .pipe(dest(destPath.js))
         .pipe(connect.reload());

@@ -1,0 +1,39 @@
+@import 'mixins';
+
+body {
+    position: relative;
+    font-size: $font-size-base;
+    background-color: $default_silver;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h1,
+.h6 {
+    letter-spacing: $letter_space_0-1;
+}
+
+
+.f-open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+}
+
+.f-open-sans-contested {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-style: normal;
+}
+
+.text-gold {
+    color: $default_gold;
+}
+
+.gold-btn {
+    padding: 18px 45px;
+    @include rem(font-size, 18px);
+    letter-spacing: $letter_space_0-1;
+    background-color: $default_gold;
+    border: 0;
+}

@@ -1,0 +1,6 @@
+@use "sass:math";
+@import 'variables';
+
+@mixin rem($property, $value) {
+    #{$property}: math.div($value, $font-size-base) * 1rem;
+}
