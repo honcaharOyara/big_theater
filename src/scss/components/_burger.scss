@@ -1,0 +1,61 @@
+.burger__btn-icon {
+    svg {
+        fill: $white;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .navbar {
+        position: static;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-fade {
+        padding: 140px 0 0 40px;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        min-height: 100%;
+        background-color: $default_silver;
+        transition: left .3s ease;
+
+        .nav-btn-close.d-none {
+            position: absolute;
+            display: block !important;
+            top: 38px;
+            right: 38px;
+            background: initial;
+            border: 0;
+
+            svg {
+                fill: $white;
+            }
+        }
+
+        .nav-item.d-none {
+            display: initial !important;
+        }
+
+        .nav-item {
+            margin-bottom: 35px;
+    
+            &:nth-child(5) {
+                margin-bottom: 90px;
+            }
+        }
+
+        
+
+        .nav-item.d-none {
+            display: initial !important;
+        }
+    }
+}
+
+.navbar-fade.show {
+    left: 0;
+}

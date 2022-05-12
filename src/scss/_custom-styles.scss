@@ -10,11 +10,20 @@ body {
 .h2,
 .h3,
 .h4,
-.h1,
+.h5,
 .h6 {
     letter-spacing: $letter_space_0-1;
 }
 
+.h1 {
+    font-size: 3.18571rem;
+}
+
+@include media-breakpoint-down(md) {
+    .h1 {
+        font-size: 3.5rem;
+    }
+}
 
 .f-open-sans {
     font-family: "Open Sans", sans-serif;

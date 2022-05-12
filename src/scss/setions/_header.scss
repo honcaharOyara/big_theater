@@ -2,8 +2,29 @@
     position: relative;
     background: url('../img/1_bg.jpg') center /cover fixed;
 
+    @include media-breakpoint-down(md) {
+        .container-xl {
+            max-width: 510px;
+            padding: 0 33px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .container-xl {
+          max-width: 690px;
+        }
+
+        .contact-info {
+            display: none;
+        }
+
+        .carousel {
+            display: none;
+        }
+    }
+
     .contact-info {
-        position: absolute;
+        position: relative;
         width: 100px;
         height: 100%;
         background-color: $bg_filter_75;
@@ -60,8 +81,25 @@
 
     @include media-breakpoint-down(xxl) {
         .phone-box {
-            padding: 0 0 0 50px;
+            padding: 0;
             text-align: center;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & {
+            padding-top: 50px;
+        }
+        .phone-box,
+        .navbar-toggler-box {
+            max-width: 50%;
+        }
+
+        .phone-box{
+            text-align: end;
+        }
+        .navbar-toggler{
+            text-align: start;
         }
     }
     
@@ -87,6 +125,21 @@
         }
     } 
 
+    @include media-breakpoint-down(lg) {
+        .nav-link{
+            &::after {
+                display: none;
+            }
+        }
+        
+        .phone-number {
+            &::after {
+                width: 100%;
+                bottom: -8px;
+            }
+        }
+    }
+
     .nav-item {
         letter-spacing: $letter_space_0-1;
         margin-right: 30px;
@@ -100,11 +153,17 @@
     }
 
     .nav-link {
-        @include rem(font-size, 18px);
+        font-size: 1.28571rem;
     }
 
     .phone-number {
-        @include rem(font-size, 16px);
+        font-size: 1.14285rem;
+    }
+
+    @include media-breakpoint-down(xl) {
+        .nav-link{
+            font-size: 1.11994rem;
+        }
     }
 
     .banner {
@@ -128,7 +187,7 @@
         }
     
         &__slide {
-            max-width: 350px;
+            max-width: 400px;
             position: relative;
             z-index: 1;
     
@@ -138,7 +197,7 @@
                 position: absolute;
                 top: 20px;
                 left: 20px;
-                width: 100%;
+                width: 350px;
                 height: 100%;
             }
     
@@ -153,6 +212,7 @@
             }
     
             &-img {
+                max-width: 350px;
                 width: 100%;
             }
         }
