@@ -1,0 +1,57 @@
+.about-theater {
+    padding-top: 150px;
+
+    .h2 {
+        margin-bottom: 100px;
+    }
+
+    .h5 {
+        margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+        .h5 {
+            text-align: center;
+        }
+    }
+
+    &__box {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        svg {
+            margin-bottom: 15px;
+            fill: $white;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__box {
+            h6{
+                text-align: center;
+            }
+
+            svg {
+                display: block;
+                margin: 0 auto 15px;
+            }
+        }
+    }
+
+    
+
+    &__img-box {
+        img {
+            max-width: 350px;
+            width: 100%;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__img-box {
+            display: none;
+            width: 0%;
+        }
+    }
+}

@@ -1,9 +1,13 @@
-@import 'mixins';
-
 body {
     position: relative;
     font-size: $font-size-base;
     background-color: $default_silver;
+}
+
+@include media-breakpoint-down(lg) {
+    .container-xl {
+      max-width: 690px;
+    }
 }
 
 .h1,

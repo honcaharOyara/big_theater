@@ -8780,6 +8780,11 @@ body {
   background-color: #333333;
 }
 
+@media (max-width: 991.98px) {
+  .container-xl {
+    max-width: 690px;
+  }
+}
 .h1,
 .h2,
 .h3,
@@ -8814,7 +8819,7 @@ body {
 
 .gold-btn {
   padding: 18px 45px;
-  font-size: 1.2857142857rem;
+  font-size: 1.28571rem;
   letter-spacing: 0.1em;
   background-color: #D1A954;
   border: 0;
@@ -8853,7 +8858,7 @@ body {
   left: 50%;
   bottom: 563px;
   transform: translateX(-50%) rotateZ(270deg);
-  font-size: 1.2857142857rem;
+  font-size: 1.28571rem;
   letter-spacing: 0.1em;
   color: #C4C4C4;
 }
@@ -9002,7 +9007,7 @@ body {
   gap: 25px;
 }
 .header .banner__slider-btn-prev span:last-child, .header .banner__slider-btn-next span:last-child {
-  font-size: 1.2857142857rem;
+  font-size: 1.28571rem;
   line-height: 25px;
   letter-spacing: 0.1em;
 }
@@ -9029,6 +9034,70 @@ body {
   fill: #fff;
 }
 
+.about-theater {
+  padding-top: 150px;
+}
+.about-theater .h2 {
+  margin-bottom: 100px;
+}
+.about-theater .h5 {
+  margin-bottom: 40px;
+}
+@media (max-width: 767.98px) {
+  .about-theater .h5 {
+    text-align: center;
+  }
+}
+.about-theater__box:not(:last-child) {
+  margin-bottom: 25px;
+}
+.about-theater__box svg {
+  margin-bottom: 15px;
+  fill: #fff;
+}
+@media (max-width: 767.98px) {
+  .about-theater__box h6, .about-theater__box .h6 {
+    text-align: center;
+  }
+  .about-theater__box svg {
+    display: block;
+    margin: 0 auto 15px;
+  }
+}
+.about-theater__img-box img {
+  max-width: 350px;
+  width: 100%;
+}
+@media (max-width: 991.98px) {
+  .about-theater__img-box {
+    display: none;
+    width: 0%;
+  }
+}
+
+.our-productions {
+  padding-top: 170px;
+}
+.our-productions .h2 {
+  margin-bottom: 100px;
+}
+.our-productions__slider-wrap {
+  width: 100%;
+  min-height: 550px;
+}
+.our-productions__slide {
+  position: relative;
+  max-width: 442px;
+  width: 100%;
+}
+.our-productions__slide-img, .our-productions__slider-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .burger__btn-icon svg {
   fill: #fff;
 }
@@ -9047,6 +9116,7 @@ body {
     position: absolute;
     top: 0;
     left: -100%;
+    z-index: 100;
     width: 300px;
     min-height: 100%;
     background-color: #333333;
@@ -9074,6 +9144,16 @@ body {
   }
   .navbar-fade .nav-item.d-none {
     display: initial !important;
+  }
+  .navbar-fade .nav-item.d-none a {
+    display: block;
+    width: fit-content;
+    width: -webkit fit-content;
+    width: -moz- fit-content;
+    margin: 0 auto 50px;
+  }
+  .navbar-fade .nav-item.d-none a svg {
+    fill: #fff;
   }
 }
 .navbar-fade.show {

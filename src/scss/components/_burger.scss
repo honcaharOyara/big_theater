@@ -18,6 +18,7 @@
         position: absolute;
         top: 0;
         left: -100%;
+        z-index: 100;
         width: 300px;
         min-height: 100%;
         background-color: $default_silver;
@@ -52,6 +53,18 @@
 
         .nav-item.d-none {
             display: initial !important;
+
+            a {
+                display: block;
+                width: fit-content;
+                width: -webkit fit-content;
+                width: -moz- fit-content;
+                margin: 0 auto 50px; 
+
+                svg {
+                    fill: $white;
+                }
+            }
         }
     }
 }
