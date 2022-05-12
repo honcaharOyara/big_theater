@@ -41,7 +41,7 @@ body {
 
 .gold-btn {
     padding: 18px 45px;
-    @include rem(font-size, 18px);
+    font-size: 1.28571rem;
     letter-spacing: $letter_space_0-1;
     background-color: $default_gold;
     border: 0;
