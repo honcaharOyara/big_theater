@@ -1,6 +1,11 @@
+@import './functions';
+
+* {
+  font-size: $font-size-base;
+}
+
 body {
   position: relative;
-  font-size: $font-size-base;
   background-color: $default_silver;
 }
 
@@ -16,23 +21,19 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: $letter_space_0-1;
 }
 
-.h1 {
-  font-size: 3.18571rem;
-}
-
-@include media-breakpoint-down(md) {
-  .h1 {
-    font-size: 3.5rem;
-  }
+h2,
+h2 span {
+  font-size: rem(48px);
+  line-height: rem(65px);
 }
 
 .f-open-sans {
@@ -40,6 +41,13 @@ input::-webkit-inner-spin-button {
   font-style: normal;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.gold-btn,
 .f-open-sans-contested {
   font-family: 'Open Sans Condensed', sans-serif;
   font-style: normal;
@@ -52,6 +60,7 @@ input::-webkit-inner-spin-button {
 .gold-btn {
   padding: 18px 45px;
   font-size: 1.12571rem;
+  line-height: rem(25px);
   letter-spacing: $letter_space_0-1;
   background-color: $default_gold;
   border: 0;
@@ -59,7 +68,7 @@ input::-webkit-inner-spin-button {
 
 .custom-input {
   padding: 10px 15px;
-  font-size: 0.8571rem;
+  font-size: rem(12px);
   color: $input_color;
   background-color: $input_bg;
   border: 1px $input_border solid;

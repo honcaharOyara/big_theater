@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container-fluid p-0">
-        <div class="row w-100 justify-content-between">
-          <div class="col-1 p-0">
+        <div class="row w-100 justify-content-between header__row-box">
+          <div class="col-lg-1 p-0 header__col-1-box">
             <div class="contact-info">
               <p class="text-uppercase fw-bold">контактная информация</p>
               <div
@@ -97,11 +97,11 @@
               </div>
             </div>
           </div>
-          <div class="col-11 p-0">
+          <div class="col-lg-11 header__col-11-box">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
               <div class="container-xl">
                 <div class="row w-100 justify-content-between">
-                  <div class="col-sm-1 col-md-1 navbar-toggler-box">
+                  <div class="col-sm-1 navbar-toggler-box d-none">
                     <button
                       class="navbar-toggler"
                       type="button"
@@ -126,7 +126,7 @@
                     </button>
                   </div>
                   <div
-                    class="collapse navbar-fade col-lg-12 col-xl-12 col-xxl-10 d-block js-navbar"
+                    class="collapse navbar-fade col-lg-12 col-xxl-10 d-block js-navbar"
                     id="navbarSupportedContent"
                     data-bs-scroll="true"
                   >
@@ -149,40 +149,40 @@
                       </svg>
                     </button>
                     <ul
-                      class="navbar-nav justify-content-end me-auto mb-2 mb-lg-0 w-100"
+                      class="navbar-nav justify-content-end justify-content-xl-center me-auto mb-2 mb-lg-0 w-100"
                     >
                       <li class="nav-item">
                         <a
                           class="nav-link p-0 fw-bold text-white f-open-sans-contested text-uppercase text-decoration-none"
-                          href="#"
+                          href="#header"
                           >Главная</a
                         >
                       </li>
                       <li class="nav-item">
                         <a
                           class="nav-link p-0 fw-bold text-white f-open-sans-contested text-uppercase text-decoration-none"
-                          href="#"
+                          href="#about-theater"
                           >о театре</a
                         >
                       </li>
                       <li class="nav-item">
                         <a
                           class="nav-link p-0 fw-bold text-white f-open-sans-contested text-uppercase text-decoration-none"
-                          href="#"
+                          href="#our-productions"
                           >Наши постановки</a
                         >
                       </li>
                       <li class="nav-item">
                         <a
                           class="nav-link p-0 fw-bold text-white f-open-sans-contested text-uppercase text-decoration-none"
-                          href="#"
+                          href="#theater-sponsors"
                           >партнеры театра</a
                         >
                       </li>
                       <li class="nav-item">
                         <a
                           class="nav-link p-0 fw-bold text-white f-open-sans-contested text-uppercase text-decoration-none"
-                          href="#"
+                          href="#footer"
                           >контакты</a
                         >
                       </li>
@@ -277,7 +277,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="phone-box col-md-4 col-lg-12 col-xl-12 col-xxl-2">
+                  <div class="phone-box col-md-4 col-lg-12 col-xxl-2">
                     <a
                       class="phone-number fw-bold text-white f-open-sans-contested text-uppercase text-decoration-none"
                       href="tel:+74951234567"
@@ -291,12 +291,10 @@
               <div class="container-xl">
                 <div class="row justify-content-between">
                   <div class="banner__content col-md-12 col-lg-6">
-                    <h1
-                      class="f-open-sans-contested h1 fw-bold text-uppercase text-white"
-                    >
+                    <h1 class="fw-bold text-uppercase text-white">
                       Большой театр
                     </h1>
-                    <p class="f-open-sans text-white fs-5">
+                    <p class="f-open-sans text-white">
                       Большо́й теа́тр — петербургский театр, существовавший в
                       1784—1886 годах, с 1886 года — Петербургская
                       консерватория. Первое постоянное в Санкт-Петербурге,
@@ -390,17 +388,17 @@
     </header>
 
     <main>
-      <section class="about-theater">
+      <section class="about-theater" id="about-theater">
         <div class="container-xl">
-          <h2 class="h2 fw-light text-white text-center text-uppercase">
+          <h2 class="fw-light text-white text-center text-uppercase">
             <span class="text-gold">о</span> театре
           </h2>
           <div class="row w-100">
             <div class="col-sm-12 col-md-8 col-lg-8 col-xl-5">
-              <h5 class="h5 fw-bold text-white text-uppercase">
+              <h5 class="fw-bold text-white text-uppercase">
                 Самый лучший театр СПБ
               </h5>
-              <p class="text-white">
+              <p class="text-white f-open-sans">
                 Как свидетельствуют архивные документы, первое каменное здание
                 Большого театра начали возводить в 1775 году по проекту Антонио
                 Ринальди. В дальнейшем, после того как Ринальди упал с лесов и
@@ -416,7 +414,7 @@
               <h5 class="h5 fw-bold text-white text-uppercase">
                 немного о цифрах
               </h5>
-              <div class="d-sm-flex justify-content-sm-evenly">
+              <div class="d-sm-flex flex-md-column justify-content-sm-evenly">
                 <div class="about-theater__box">
                   <svg
                     width="62"
@@ -471,7 +469,7 @@
         </div>
       </section>
 
-      <section class="our-productions">
+      <section class="our-productions" id="our-productions">
         <h2 class="h2 fw-light text-white text-center text-uppercase">
           <span class="text-gold">наши</span> постановки
         </h2>
@@ -629,10 +627,8 @@
                     </svg>
                   </li>
                 </ul>
-                <p
-                  class="fs-1 fw-bold text-white f-open-sans our-productions__text"
-                >
-                  Лучший театр по мнению театральных критиков Парижа
+                <p class="fw-bold text-white f-open-sans our-productions__text">
+                  Лучший театр <br />по мнению театральных критиков Парижа
                 </p>
               </div>
             </div>
@@ -640,7 +636,7 @@
         </div>
       </section>
 
-      <section class="theater-sponsors">
+      <section class="theater-sponsors" id="theater-sponsors">
         <div class="container-xl">
           <h2 class="h2 fw-light text-white text-uppercase text-center">
             <span class="text-gold">партнеры</span> театра
@@ -679,7 +675,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container-xl">
         <h2
           class="h2 f-open-sans-condensed fw-light text-white text-center text-uppercase"

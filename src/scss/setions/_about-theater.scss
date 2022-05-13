@@ -1,18 +1,26 @@
 .about-theater {
   margin-bottom: 170px;
 
-  .h2 {
+  h2 {
     margin-bottom: 100px;
   }
 
-  .h5 {
+  h5 {
     margin-bottom: 40px;
+    font-size: rem(20px);
+    line-height: rem(29px);
   }
 
   @include media-breakpoint-down(md) {
-    .h5 {
+    h5 {
       text-align: center;
     }
+  }
+
+  h6 {
+    font-size: rem(16px);
+    line-height: rem(22px);
+    letter-spacing: $letter_space_0-05;
   }
 
   &__box {

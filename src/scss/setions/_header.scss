@@ -1,7 +1,13 @@
+@import '../functions';
+
 .header {
   margin-bottom: 150px;
   position: relative;
   background: url('../img/1_bg.jpg') center / cover fixed;
+
+  &__col-11-box {
+    padding-top: 50px;
+  }
 
   @include media-breakpoint-down(md) {
     .container-xl {
@@ -22,6 +28,21 @@
     .carousel {
       display: none;
     }
+
+    .phone-box,
+    .navbar-toggler-box {
+      display: block !important;
+      max-width: 50%;
+      padding: 0;
+    }
+
+    .phone-box {
+      text-align: end;
+    }
+
+    .navbar-toggler {
+      text-align: start;
+    }
   }
 
   .contact-info {
@@ -33,10 +54,12 @@
     p {
       width: 345px;
       position: absolute;
-      left: 50%;
-      bottom: 563px;
-      transform: translateX(-50%) rotateZ(270deg);
-      font-size: 1.28571rem;
+      left: 40px;
+      bottom: 390px;
+      transform-origin: left top;
+      transform: translateY(-50%) rotateZ(270deg);
+      font-size: rem(18px);
+      line-height: rem(25px);
       letter-spacing: $letter_space_0-1;
       color: $slider_btn;
     }
@@ -75,32 +98,19 @@
     }
   }
 
-  .navbar-nav,
-  .phone-box {
-    padding: 50px 0;
-  }
-
   @include media-breakpoint-down(xxl) {
+    .navbar-fade {
+      margin-bottom: 50px;
+    }
     .phone-box {
-      padding: 0;
       text-align: center;
     }
   }
 
-  @include media-breakpoint-down(lg) {
-    & {
-      padding-top: 50px;
-    }
-    .phone-box,
-    .navbar-toggler-box {
-      max-width: 50%;
-    }
-
-    .phone-box {
-      text-align: end;
-    }
-    .navbar-toggler {
-      text-align: start;
+  @include media-breakpoint-up(xxl) {
+    .contact-info {
+      width: 150px;
+      left: 62px;
     }
   }
 
@@ -126,6 +136,20 @@
     }
   }
 
+  .nav-link {
+    font-size: rem(18px);
+    line-height: rem(25px);
+  }
+
+  .phone-number {
+    font-size: rem(16px);
+    line-height: rem(22px);
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+
   @include media-breakpoint-down(lg) {
     .nav-link {
       &::after {
@@ -136,7 +160,6 @@
     .phone-number {
       &::after {
         width: 100%;
-        bottom: -8px;
       }
     }
   }
@@ -152,20 +175,6 @@
     }
   }
 
-  .nav-link {
-    font-size: 1.28571rem;
-  }
-
-  .phone-number {
-    font-size: 1.14285rem;
-  }
-
-  @include media-breakpoint-down(xl) {
-    .nav-link {
-      font-size: 1.11994rem;
-    }
-  }
-
   .banner {
     padding: 140px 0 208px 0;
 
@@ -175,9 +184,14 @@
         margin-bottom: 50px;
       }
 
+      h1 {
+        font-size: rem(64px);
+        line-height: rem(84px);
+      }
+
       @include media-breakpoint-down(sm) {
-        .h1 {
-          font-size: 3.25714rem;
+        h1 {
+          font-size: rem(44px);
         }
       }
     }
@@ -232,8 +246,8 @@
       gap: 25px;
 
       span:last-child {
-        font-size: 1.28571rem;
-        line-height: 25px;
+        font-size: rem(18px);
+        line-height: rem(25px);
         letter-spacing: $letter_space_0-1;
       }
 

@@ -497,64 +497,69 @@ progress {
 }
 
 .display-1 {
-  font-size: calc(1.582142rem + 3.985704vw);
+  font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-1 {
-    font-size: 4.57142rem;
+    font-size: 5rem;
   }
 }
 
 .display-2 {
-  font-size: calc(1.467857rem + 2.614284vw);
+  font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-2 {
-    font-size: 3.42857rem;
+    font-size: 4.5rem;
   }
 }
 
 .display-3 {
-  font-size: calc(1.382142rem + 1.585704vw);
+  font-size: calc(1.525rem + 3.3vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-3 {
-    font-size: 2.57142rem;
+    font-size: 4rem;
   }
 }
 
 .display-4 {
-  font-size: calc(1.296428rem + 0.557136vw);
+  font-size: calc(1.475rem + 2.7vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-4 {
-    font-size: 1.71428rem;
+    font-size: 3.5rem;
   }
 }
 
 .display-5 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
   .display-5 {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 }
 
 .display-6 {
-  font-size: 1rem;
+  font-size: calc(1.375rem + 1.5vw);
   font-weight: 300;
   line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-6 {
+    font-size: 2.5rem;
+  }
 }
 
 .list-unstyled {
@@ -9138,9 +9143,12 @@ textarea.form-control-lg {
   top: 0;
 }
 
+* {
+  font-size: 14px;
+}
+
 body {
   position: relative;
-  font-size: 14px;
   background-color: #333333;
 }
 
@@ -9155,29 +9163,44 @@ input::-webkit-inner-spin-button {
     max-width: 690px;
   }
 }
-.h1,
+h1, .h1,
+h2,
 .h2,
+h3,
 .h3,
+h4,
 .h4,
+h5,
 .h5,
+h6,
 .h6 {
   letter-spacing: 0.1em;
 }
 
-.h1 {
-  font-size: 3.18571rem;
+h2, .h2,
+h2 span,
+.h2 span {
+  font-size: 3.4285714286rem;
+  line-height: 4.6428571429rem;
 }
 
-@media (max-width: 767.98px) {
-  .h1 {
-    font-size: 3.5rem;
-  }
-}
 .f-open-sans {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
 }
 
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.gold-btn,
 .f-open-sans-contested {
   font-family: "Open Sans Condensed", sans-serif;
   font-style: normal;
@@ -9190,6 +9213,7 @@ input::-webkit-inner-spin-button {
 .gold-btn {
   padding: 18px 45px;
   font-size: 1.12571rem;
+  line-height: 1.7857142857rem;
   letter-spacing: 0.1em;
   background-color: #d1a954;
   border: 0;
@@ -9197,7 +9221,7 @@ input::-webkit-inner-spin-button {
 
 .custom-input {
   padding: 10px 15px;
-  font-size: 0.8571rem;
+  font-size: 0.8571428571rem;
   color: #989898;
   background-color: #444444;
   border: 1px #616161 solid;
@@ -9213,6 +9237,9 @@ input::-webkit-inner-spin-button {
   margin-bottom: 150px;
   position: relative;
   background: url("../img/1_bg.jpg") center/cover fixed;
+}
+.header__col-11-box {
+  padding-top: 50px;
 }
 @media (max-width: 767.98px) {
   .header .container-xl {
@@ -9230,6 +9257,18 @@ input::-webkit-inner-spin-button {
   .header .carousel {
     display: none;
   }
+  .header .phone-box,
+.header .navbar-toggler-box {
+    display: block !important;
+    max-width: 50%;
+    padding: 0;
+  }
+  .header .phone-box {
+    text-align: end;
+  }
+  .header .navbar-toggler {
+    text-align: start;
+  }
 }
 .header .contact-info {
   position: relative;
@@ -9240,10 +9279,12 @@ input::-webkit-inner-spin-button {
 .header .contact-info p {
   width: 345px;
   position: absolute;
-  left: 50%;
-  bottom: 563px;
-  transform: translateX(-50%) rotateZ(270deg);
-  font-size: 1.28571rem;
+  left: 40px;
+  bottom: 390px;
+  transform-origin: left top;
+  transform: translateY(-50%) rotateZ(270deg);
+  font-size: 1.2857142857rem;
+  line-height: 1.7857142857rem;
   letter-spacing: 0.1em;
   color: #c4c4c4;
 }
@@ -9271,29 +9312,18 @@ input::-webkit-inner-spin-button {
 .header .contact-info__socials a:hover svg {
   fill: #d1a954;
 }
-.header .navbar-nav,
-.header .phone-box {
-  padding: 50px 0;
-}
 @media (max-width: 1399.98px) {
+  .header .navbar-fade {
+    margin-bottom: 50px;
+  }
   .header .phone-box {
-    padding: 0;
     text-align: center;
   }
 }
-@media (max-width: 991.98px) {
-  .header {
-    padding-top: 50px;
-  }
-  .header .phone-box,
-.header .navbar-toggler-box {
-    max-width: 50%;
-  }
-  .header .phone-box {
-    text-align: end;
-  }
-  .header .navbar-toggler {
-    text-align: start;
+@media (min-width: 1400px) {
+  .header .contact-info {
+    width: 150px;
+    left: 62px;
   }
 }
 .header .nav-link,
@@ -9315,13 +9345,23 @@ input::-webkit-inner-spin-button {
 .header .phone-number:hover::after {
   width: 100%;
 }
+.header .nav-link {
+  font-size: 1.2857142857rem;
+  line-height: 1.7857142857rem;
+}
+.header .phone-number {
+  font-size: 1.1428571429rem;
+  line-height: 1.5714285714rem;
+}
+.header .phone-number::after {
+  bottom: -8px;
+}
 @media (max-width: 991.98px) {
   .header .nav-link::after {
     display: none;
   }
   .header .phone-number::after {
     width: 100%;
-    bottom: -8px;
   }
 }
 .header .nav-item {
@@ -9333,17 +9373,6 @@ input::-webkit-inner-spin-button {
     margin-right: 0;
   }
 }
-.header .nav-link {
-  font-size: 1.28571rem;
-}
-.header .phone-number {
-  font-size: 1.14285rem;
-}
-@media (max-width: 1199.98px) {
-  .header .nav-link {
-    font-size: 1.11994rem;
-  }
-}
 .header .banner {
   padding: 140px 0 208px 0;
 }
@@ -9351,9 +9380,13 @@ input::-webkit-inner-spin-button {
 .header .banner__content p {
   margin-bottom: 50px;
 }
+.header .banner__content h1, .header .banner__content .h1 {
+  font-size: 4.5714285714rem;
+  line-height: 6rem;
+}
 @media (max-width: 575.98px) {
-  .header .banner__content .h1 {
-    font-size: 3.25714rem;
+  .header .banner__content h1, .header .banner__content .h1 {
+    font-size: 3.1428571429rem;
   }
 }
 .header .banner .carousel {
@@ -9397,8 +9430,8 @@ input::-webkit-inner-spin-button {
   gap: 25px;
 }
 .header .banner__slider-btn-prev span:last-child, .header .banner__slider-btn-next span:last-child {
-  font-size: 1.28571rem;
-  line-height: 25px;
+  font-size: 1.2857142857rem;
+  line-height: 1.7857142857rem;
   letter-spacing: 0.1em;
 }
 .header .banner__slider-btn-prev span, .header .banner__slider-btn-next span {
@@ -9427,16 +9460,23 @@ input::-webkit-inner-spin-button {
 .about-theater {
   margin-bottom: 170px;
 }
-.about-theater .h2 {
+.about-theater h2, .about-theater .h2 {
   margin-bottom: 100px;
 }
-.about-theater .h5 {
+.about-theater h5, .about-theater .h5 {
   margin-bottom: 40px;
+  font-size: 1.4285714286rem;
+  line-height: 2.0714285714rem;
 }
 @media (max-width: 767.98px) {
-  .about-theater .h5 {
+  .about-theater h5, .about-theater .h5 {
     text-align: center;
   }
+}
+.about-theater h6, .about-theater .h6 {
+  font-size: 1.1428571429rem;
+  line-height: 1.5714285714rem;
+  letter-spacing: 0.05em;
 }
 .about-theater__box:not(:last-child) {
   margin-bottom: 25px;
@@ -9516,6 +9556,9 @@ input::-webkit-inner-spin-button {
 }
 .our-productions__slide-cover span {
   position: absolute;
+  font-size: 1.7142857143rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.05em;
 }
 .our-productions__slide-cover span:first-child {
   top: 40px;
@@ -9579,7 +9622,8 @@ input::-webkit-inner-spin-button {
   }
 }
 .our-productions__years span {
-  font-size: 3.71428rem;
+  font-size: 5.1428571429rem;
+  line-height: 7rem;
   letter-spacing: 0.1em;
 }
 .our-productions__stars-list {
@@ -9592,7 +9636,7 @@ input::-webkit-inner-spin-button {
   fill: #d1a954;
 }
 .our-productions__text {
-  font-size: 2.57142rem;
+  font-size: 2.5714285714rem;
 }
 
 .theater-sponsors {
@@ -9621,7 +9665,9 @@ input::-webkit-inner-spin-button {
   list-style: none;
 }
 .footer__contacts-list li a {
-  font-size: 1.1428rem;
+  font-size: 1.1428571429rem;
+  line-height: 1.5714285714rem;
+  letter-spacing: 0.05em;
 }
 @media (max-width: 991.98px) {
   .footer__contacts-list li:nth-child(1), .footer__contacts-list li:nth-child(3) {
@@ -9648,14 +9694,18 @@ input::-webkit-inner-spin-button {
 }
 .footer__input-box input {
   width: 100%;
+  font-size: 0.8571428571rem;
+  font-weight: 600;
 }
 .footer__textarea {
   width: 100%;
   height: 100%;
   resize: none;
+  font-size: 0.8571428571rem;
+  font-weight: 600;
 }
 .footer__form-info {
-  font-size: 0.77571rem;
+  font-size: 0.8571428571rem;
   color: #989898;
 }
 .footer__btn {

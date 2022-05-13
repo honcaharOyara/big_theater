@@ -59,6 +59,9 @@
 
     span {
       position: absolute;
+      font-size: rem(24px);
+      line-height: rem(35px);
+      letter-spacing: $letter_space_0-05;
     }
 
     span:first-child {
@@ -143,7 +146,8 @@
 
   &__years {
     span {
-      font-size: 3.71428rem;
+      font-size: rem(72px);
+      line-height: rem(98px);
       letter-spacing: $letter_space_0-1;
     }
   }
@@ -161,6 +165,6 @@
   }
 
   &__text {
-    font-size: 2.57142rem;
+    font-size: rem(36px);
   }
 }
