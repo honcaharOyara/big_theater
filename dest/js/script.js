@@ -10571,6 +10571,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
 
 
+const optionsOurProductsSlider = {
+  type: 'slide',
+  autoplay: false,
+  arrows: false,
+  pagination: false,
+  fixedWidth: '440px',
+  fixedHeight: '550px',
+  focus: 'center',
+  drag: 'free',
+  snap: true,
+};
+
+new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('.our-productions__slider', optionsOurProductsSlider).mount();
+
 const optionsTheaterSponsorsSlider = {
   type: 'slide',
   autoplay: false,
@@ -10581,18 +10595,7 @@ const optionsTheaterSponsorsSlider = {
   gap: '80px',
 };
 
-const optionsOurProductsSlider = {
-  type: 'loop',
-  autoplay: false,
-  arrows: false,
-  pagination: false,
-  fixedWidth: '440px',
-  fixedHeight: '550px',
-  focus: 'center',
-};
-
 new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('.theater-sponsors__slider', optionsTheaterSponsorsSlider).mount();
-new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('.our-productions__slider', optionsOurProductsSlider).mount();
 
 
 /***/ })

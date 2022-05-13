@@ -9550,7 +9550,7 @@ body {
   .our-productions span {
     display: block;
   }
-  .our-productions ul {
+  .our-productions > ul {
     justify-content: center;
   }
   .our-productions span,

@@ -1,5 +1,19 @@
 import Splide from '@splidejs/splide';
 
+const optionsOurProductsSlider = {
+  type: 'slide',
+  autoplay: false,
+  arrows: false,
+  pagination: false,
+  fixedWidth: '440px',
+  fixedHeight: '550px',
+  focus: 'center',
+  drag: 'free',
+  snap: true,
+};
+
+new Splide('.our-productions__slider', optionsOurProductsSlider).mount();
+
 const optionsTheaterSponsorsSlider = {
   type: 'slide',
   autoplay: false,
@@ -10,15 +24,4 @@ const optionsTheaterSponsorsSlider = {
   gap: '80px',
 };
 
-const optionsOurProductsSlider = {
-  type: 'loop',
-  autoplay: false,
-  arrows: false,
-  pagination: false,
-  fixedWidth: '440px',
-  fixedHeight: '550px',
-  focus: 'center',
-};
-
 new Splide('.theater-sponsors__slider', optionsTheaterSponsorsSlider).mount();
-new Splide('.our-productions__slider', optionsOurProductsSlider).mount();
