@@ -1,22 +1,21 @@
 @font-face {
-  font-family: "Open Sans", sans-serif;
-  src: url("../fonts/open-sans/OpenSans-Regular.ttf") format("ttf");
-  src: url("../fonts/open-sans/OpenSans-Regular.woff") format("woff");
-  src: url("../fonts/open-sans/OpenSans-Regular.woff2") format("woff2");
-  src: url("../fonts/open-sans/OpenSans-SemiBold.ttf") format("ttf");
-  src: url("../fonts/open-sans/OpenSans-SemiBold.woff") format("woff");
-  src: url("../fonts/open-sans/OpenSans-SemiBold.woff2") format("woff2");
-  src: url("../fonts/open-sans/OpenSans-Bold.ttf") format("ttf");
-  src: url("../fonts/open-sans/OpenSans-Bold.woff") format("woff");
-  src: url("../fonts/open-sans/OpenSans-Bold.woff2") format("woff2");
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v29/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2)
+    format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
 @font-face {
-  font-family: "Open Sans Condensed", sans-serif;
-  src: url("../fonts/open-sans-condesed/OpenSansCondensed-light.ttf") format("ttf");
-  src: url("../fonts/open-sans-condesed/OpenSansCondensed-light.woff") format("woff");
-  src: url("../fonts/open-sans-condesed/OpenSansCondensed-light.woff2") format("woff2");
-  src: url("../fonts/open-sans-condesed/OpenSansCondensed-Bold.ttf") format("ttf");
-  src: url("../fonts/open-sans-condesed/OpenSansCondensed-Bold.woff") format("woff");
-  src: url("../fonts/open-sans-condesed/OpenSansCondensed-Bold.woff2") format("woff2");
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 75%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v29/memvYaGs126MiZpBA-UvWbX2vVnXBbObjz2VTSumu1aB.woff2)
+    format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
