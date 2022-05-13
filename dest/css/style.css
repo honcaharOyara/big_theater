@@ -1964,7 +1964,7 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #989898;
   background-color: #444444;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -9144,6 +9144,12 @@ body {
   background-color: #333333;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media (max-width: 991.98px) {
   .container-xl {
     max-width: 690px;
@@ -9178,15 +9184,29 @@ body {
 }
 
 .text-gold {
-  color: #D1A954;
+  color: #d1a954;
 }
 
 .gold-btn {
   padding: 18px 45px;
-  font-size: 1.28571rem;
+  font-size: 1.12571rem;
   letter-spacing: 0.1em;
-  background-color: #D1A954;
+  background-color: #d1a954;
   border: 0;
+}
+
+.custom-input {
+  padding: 10px 15px;
+  font-size: 0.8571rem;
+  color: #989898;
+  background-color: #444444;
+  border: 1px #616161 solid;
+  border-radius: 0;
+}
+
+.custom-input:focus {
+  background-color: #444444;
+  outline: none;
 }
 
 .header {
@@ -9225,7 +9245,7 @@ body {
   transform: translateX(-50%) rotateZ(270deg);
   font-size: 1.28571rem;
   letter-spacing: 0.1em;
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 .header .contact-info__socials {
   position: absolute;
@@ -9239,17 +9259,17 @@ body {
   top: -115px;
   width: 3px;
   height: 75px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
 }
 .header .contact-info__socials a:not(:last-child) {
   margin-bottom: 30px;
 }
 .header .contact-info__socials a svg {
-  fill: #C4C4C4;
+  fill: #c4c4c4;
   transition: fill 0.3s ease;
 }
 .header .contact-info__socials a:hover svg {
-  fill: #D1A954;
+  fill: #d1a954;
 }
 .header .navbar-nav,
 .header .phone-box {
@@ -9288,7 +9308,7 @@ body {
   bottom: -5px;
   width: 0;
   height: 2px;
-  background-color: #D1A954;
+  background-color: #d1a954;
   transition: all 0.3s ease;
 }
 .header .nav-link:hover::after,
@@ -9382,13 +9402,13 @@ body {
   letter-spacing: 0.1em;
 }
 .header .banner__slider-btn-prev span, .header .banner__slider-btn-next span {
-  color: #C4C4C4;
+  color: #c4c4c4;
   transition: color 0.3s ease;
 }
 .header .banner__slider-btn-prev span svg, .header .banner__slider-btn-next span svg {
   width: 40px;
   height: 25px;
-  fill: #C4C4C4;
+  fill: #c4c4c4;
   transition: fill 0.3s ease;
 }
 .header .banner__slider-btn-prev {
@@ -9483,7 +9503,7 @@ body {
   transition: all 0.3s ease;
 }
 .our-productions__slide-img::before {
-  background-color: #D1A954;
+  background-color: #d1a954;
 }
 .our-productions__slide-img::after {
   background: url(../img/svg/loupe.svg) center no-repeat;
@@ -9569,7 +9589,7 @@ body {
   list-style: none;
 }
 .our-productions__star svg {
-  fill: #D1A954;
+  fill: #d1a954;
 }
 .our-productions__text {
   font-size: 2.57142rem;
@@ -9583,6 +9603,81 @@ body {
 }
 .theater-sponsors__slide {
   gap: 80px;
+}
+
+.footer .h2 {
+  margin-bottom: 100px;
+}
+@media (max-width: 575.98px) {
+  .footer__contact-form-box {
+    flex-direction: column-reverse;
+  }
+}
+.footer__contacts-list {
+  padding: 0;
+}
+.footer__contacts-list li {
+  margin-bottom: 25px;
+  list-style: none;
+}
+.footer__contacts-list li a {
+  font-size: 1.1428rem;
+}
+@media (max-width: 991.98px) {
+  .footer__contacts-list li:nth-child(1), .footer__contacts-list li:nth-child(3) {
+    text-align: left;
+  }
+  .footer__contacts-list li:nth-child(2), .footer__contacts-list li:nth-child(4) {
+    text-align: right;
+  }
+}
+@media (max-width: 575.98px) {
+  .footer__contacts-list li:nth-child(1), .footer__contacts-list li:nth-child(2), .footer__contacts-list li:nth-child(3), .footer__contacts-list li:nth-child(4) {
+    text-align: left;
+  }
+}
+.footer__form {
+  margin-bottom: 80px;
+}
+.footer__input-box, .footer__textarea-box {
+  margin-bottom: 40px;
+  min-height: 100px;
+}
+.footer__input-box input:first-child {
+  margin-bottom: 30px;
+}
+.footer__input-box input {
+  width: 100%;
+}
+.footer__textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+.footer__form-info {
+  font-size: 0.77571rem;
+  color: #989898;
+}
+.footer__btn {
+  line-height: 1.78571rem;
+}
+.footer__info {
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
+}
+.footer__info::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #565656;
+}
+.footer__info p {
+  color: #989898;
 }
 
 .burger__btn-icon svg {

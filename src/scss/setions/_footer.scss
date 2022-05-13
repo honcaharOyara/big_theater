@@ -1,0 +1,101 @@
+.footer {
+  .h2 {
+    margin-bottom: 100px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__contact-form-box {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__contacts-list {
+    padding: 0;
+
+    li {
+      margin-bottom: 25px;
+      list-style: none;
+
+      a {
+        font-size: 1.1428rem;
+      }
+
+      @include media-breakpoint-down(lg) {
+        &:nth-child(1),
+        &:nth-child(3) {
+          text-align: left;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+          text-align: right;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__form {
+    margin-bottom: 80px;
+  }
+
+  &__input-box,
+  &__textarea-box {
+    margin-bottom: 40px;
+    min-height: 100px;
+  }
+
+  &__input-box {
+    input:first-child {
+      margin-bottom: 30px;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+  }
+
+  &__form-info {
+    font-size: 0.77571rem;
+    color: $input_color;
+  }
+
+  &__btn {
+    line-height: 1.78571rem;
+  }
+
+  &__info {
+    position: relative;
+    padding: 30px 0;
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $footer_before_bg;
+    }
+
+    p {
+      color: $input_color;
+    }
+  }
+}

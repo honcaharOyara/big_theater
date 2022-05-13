@@ -1,13 +1,19 @@
 body {
-    position: relative;
-    font-size: $font-size-base;
-    background-color: $default_silver;
+  position: relative;
+  font-size: $font-size-base;
+  background-color: $default_silver;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @include media-breakpoint-down(lg) {
-    .container-xl {
-      max-width: 690px;
-    }
+  .container-xl {
+    max-width: 690px;
+  }
 }
 
 .h1,
@@ -16,37 +22,51 @@ body {
 .h4,
 .h5,
 .h6 {
-    letter-spacing: $letter_space_0-1;
+  letter-spacing: $letter_space_0-1;
 }
 
 .h1 {
-    font-size: 3.18571rem;
+  font-size: 3.18571rem;
 }
 
 @include media-breakpoint-down(md) {
-    .h1 {
-        font-size: 3.5rem;
-    }
+  .h1 {
+    font-size: 3.5rem;
+  }
 }
 
 .f-open-sans {
-    font-family: "Open Sans", sans-serif;
-    font-style: normal;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
 }
 
 .f-open-sans-contested {
-    font-family: "Open Sans Condensed", sans-serif;
-    font-style: normal;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-style: normal;
 }
 
 .text-gold {
-    color: $default_gold;
+  color: $default_gold;
 }
 
 .gold-btn {
-    padding: 18px 45px;
-    font-size: 1.28571rem;
-    letter-spacing: $letter_space_0-1;
-    background-color: $default_gold;
-    border: 0;
+  padding: 18px 45px;
+  font-size: 1.12571rem;
+  letter-spacing: $letter_space_0-1;
+  background-color: $default_gold;
+  border: 0;
+}
+
+.custom-input {
+  padding: 10px 15px;
+  font-size: 0.8571rem;
+  color: $input_color;
+  background-color: $input_bg;
+  border: 1px $input_border solid;
+  border-radius: 0;
+}
+
+.custom-input:focus {
+  background-color: $input_bg;
+  outline: none;
 }

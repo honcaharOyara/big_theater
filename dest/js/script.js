@@ -10541,6 +10541,63 @@ var SplideRenderer = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/js/form-handler.js":
+/*!********************************!*\
+  !*** ./src/js/form-handler.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ formHandler)
+/* harmony export */ });
+function formHandler(e) {
+  e.preventDefault();
+  const target = e.target;
+  const submitBtn = target.querySelector('.js-btn');
+  const formControlInputs = target.querySelectorAll('.js-form-value');
+
+  setPreloader(submitBtn);
+  getFormData(formControlInputs);
+
+  formControlInputs.forEach((input) => {
+    input.value = '';
+  });
+}
+
+function getFormData(formControlInputs) {
+  const formData = {};
+
+  formControlInputs.forEach((input) => {
+    formData[input.dataset.key] = input.value;
+  });
+
+  return formData;
+}
+
+function setPreloader(btn) {
+  const btnTextContent = btn.textContent;
+
+  btn.style.width = btn.offsetWidth + 'px';
+  btn.style.height = btn.offsetHeight + 'px';
+  btn.classList.add('p-0-20');
+  btn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  <span class="visually-hidden">Отправка...</span>`;
+  btn.setAttribute('disabled', 'disabled');
+
+  const timeoutID = setTimeout(() => {
+    btn.innerHTML = btnTextContent;
+    btn.removeAttribute('style');
+    btn.classList.remove('p-0-20');
+    btn.removeAttribute('disabled');
+    clearTimeout(timeoutID);
+  }, 2000);
+}
+
+
+/***/ }),
+
 /***/ "./src/js/refs.js":
 /*!************************!*\
   !*** ./src/js/refs.js ***!
@@ -10553,10 +10610,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-    body: document.querySelector('body'),
-    navbar: document.querySelector('.js-navbar'),
-    navCloseBtn: document.querySelector('.js-nav-close'),
+  body: document.querySelector('body'),
+  navbar: document.querySelector('.js-navbar'),
+  navCloseBtn: document.querySelector('.js-nav-close'),
+  footerForm: document.querySelector('.js-form'),
 });
+
 
 /***/ }),
 
@@ -10679,16 +10738,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_js_bootstrap_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/js/bootstrap.bundle */ "./node_modules/bootstrap/dist/js/bootstrap.bundle.js");
 /* harmony import */ var bootstrap_dist_js_bootstrap_bundle__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_bundle__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _splide_slider_settings__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./splide-slider-settings */ "./src/js/splide-slider-settings.js");
-/* harmony import */ var _refs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./refs */ "./src/js/refs.js");
+/* harmony import */ var _form_handler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form-handler */ "./src/js/form-handler.js");
+/* harmony import */ var _refs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./refs */ "./src/js/refs.js");
 
 
 
 
-_refs__WEBPACK_IMPORTED_MODULE_2__["default"].navCloseBtn.addEventListener('click', () => {
+
+_refs__WEBPACK_IMPORTED_MODULE_3__["default"].navCloseBtn.addEventListener('click', () => {
   setTimeout(() => {
-    _refs__WEBPACK_IMPORTED_MODULE_2__["default"].navbar.removeAttribute('style');
+    _refs__WEBPACK_IMPORTED_MODULE_3__["default"].navbar.removeAttribute('style');
   }, 500);
 });
+
+_refs__WEBPACK_IMPORTED_MODULE_3__["default"].footerForm.addEventListener('submit', _form_handler__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 })();
 
