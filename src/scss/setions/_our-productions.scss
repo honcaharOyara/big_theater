@@ -156,6 +156,12 @@
     gap: 25px;
   }
 
+  @include media-breakpoint-down(sm) {
+    &__stars-list {
+      justify-content: center;
+    }
+  }
+
   &__star {
     list-style: none;
 
