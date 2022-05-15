@@ -10558,39 +10558,29 @@ function formHandler(e) {
   const submitBtn = target.querySelector('.js-btn');
   const formControlInputs = target.querySelectorAll('.js-form-value');
 
-  setPreloader(submitBtn);
+  fakeSendingData(submitBtn);
   getFormData(formControlInputs);
 
-  formControlInputs.forEach((input) => {
-    input.value = '';
-  });
+  formControlInputs.forEach((input) => (input.value = ''));
 }
 
 function getFormData(formControlInputs) {
   const formData = {};
 
-  formControlInputs.forEach((input) => {
-    formData[input.dataset.key] = input.value;
-  });
+  formControlInputs.forEach(
+    (input) => (formData[input.dataset.key] = input.value)
+  );
 
   return formData;
 }
 
-function setPreloader(btn) {
+function fakeSendingData(btn) {
   const btnTextContent = btn.textContent;
-
-  btn.style.width = btn.offsetWidth + 'px';
-  btn.style.height = btn.offsetHeight + 'px';
-  btn.classList.add('p-0-20');
   btn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                   <span class="visually-hidden">Отправка...</span>`;
-  btn.setAttribute('disabled', 'disabled');
 
   const timeoutID = setTimeout(() => {
     btn.innerHTML = btnTextContent;
-    btn.removeAttribute('style');
-    btn.classList.remove('p-0-20');
-    btn.removeAttribute('disabled');
     clearTimeout(timeoutID);
   }, 2000);
 }
@@ -10610,10 +10600,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  body: document.querySelector('body'),
-  navbar: document.querySelector('.js-navbar'),
   navCloseBtn: document.querySelector('.js-nav-close'),
   footerForm: document.querySelector('.js-form'),
+  scrollupBtn: document.querySelector('.js-scrollup-btn'),
 });
 
 
@@ -10749,6 +10738,12 @@ _refs__WEBPACK_IMPORTED_MODULE_3__["default"].navCloseBtn.addEventListener('clic
   setTimeout(() => {
     _refs__WEBPACK_IMPORTED_MODULE_3__["default"].navbar.removeAttribute('style');
   }, 500);
+});
+
+window.addEventListener('scroll', () => {
+  window.pageYOffset > 0
+    ? _refs__WEBPACK_IMPORTED_MODULE_3__["default"].scrollupBtn.classList.replace('invisible', 'visible')
+    : _refs__WEBPACK_IMPORTED_MODULE_3__["default"].scrollupBtn.classList.replace('visible', 'invisible');
 });
 
 _refs__WEBPACK_IMPORTED_MODULE_3__["default"].footerForm.addEventListener('submit', _form_handler__WEBPACK_IMPORTED_MODULE_2__["default"]);

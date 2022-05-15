@@ -9,4 +9,10 @@ refs.navCloseBtn.addEventListener('click', () => {
   }, 500);
 });
 
+window.addEventListener('scroll', () => {
+  window.pageYOffset > 0
+    ? refs.scrollupBtn.classList.replace('invisible', 'visible')
+    : refs.scrollupBtn.classList.replace('visible', 'invisible');
+});
+
 refs.footerForm.addEventListener('submit', formHandler);
