@@ -86,6 +86,7 @@ h6,
   bottom: 50px;
   width: 40px;
   height: 40px;
+  z-index: 1000;
   background-color: $default_gold;
 
   &::after,
