@@ -64,6 +64,10 @@ h6,
   letter-spacing: $letter_space_0-1;
   background-color: $default_gold;
   border: 0;
+
+  &:hover {
+    background-color: $default_gold-hover;
+  }
 }
 
 .custom-input {
@@ -88,6 +92,10 @@ h6,
   height: 40px;
   z-index: 1000;
   background-color: $default_gold;
+
+  &:hover {
+    background-color: $default_gold-hover;
+  }
 
   &::after,
   &::before {
