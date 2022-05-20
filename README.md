@@ -7,3 +7,4 @@ Technology stack:
 - scss
 - js
 - bootstrap
+- splide
